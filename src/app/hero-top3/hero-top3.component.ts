@@ -18,6 +18,6 @@ export class HeroTop3Component implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes.splice(heroes.length-3,3));   // get last 3 Heroes
+    .subscribe(heroes => this.heroes = heroes.slice(-3));   // get last 3 Heroes
   }
 }
